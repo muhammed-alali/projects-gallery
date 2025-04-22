@@ -54,7 +54,7 @@ export default function ProjectsGallery() {
       </div>
       <div className=" grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
         {data.map((item) => (
-          <div className=" md:mx-auto mb-4 md:mb-8  ">
+          <div key={item.id} className=" md:mx-auto mb-4 md:mb-8  ">
             <Link href={"/"}>
               <div
                 key={item.id}
