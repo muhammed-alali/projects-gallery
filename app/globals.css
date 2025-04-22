@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tab-button {
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #1563df; /* Tailwind Blue (bg-blue-500) */
+  color: white;
+}
+
+.tab-button[data-state="active"] {
+  background-color: #1563df; /* Tailwind Blue (bg-blue-500) */
+  color: white !important;
+}
+
+/********* hero swiper *********/
+/* #heroİd .swiper-button-prev:after,
+.swiper-button-next:after {
+  color: white !important;
+} */
+/******************************/
+
+/********** about rotateBorder ***********/
+
+.rotateBorder:hover {
+  transform: rotateY(180deg);
+}
+
+.rotateBorder::after {
+  animation-name: Rotate;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.animationTopBottom {
+  animation-name: topToBottom;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes topToBottom {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/*****************************/
+body {
+  position: relative;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.css-position {
+  background-position: 0px 28%;
+}
+
+.css-border {
+  padding-left: calc(28px + 11px);
+}
+
+.op {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 500px) {
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+  .swiper-button-prev::after {
+    font-size: 30px !important;
+  }
+}
