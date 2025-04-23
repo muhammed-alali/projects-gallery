@@ -6,7 +6,7 @@ const data = [
   { id: 1, title: "التدقيق المستقل", imageName: "/photo/proje1.png" },
   { id: 2, title: "مطعم", imageName: "/photo/proje2.png" },
   { id: 4, title: "التدقيق المستقل", imageName: "/photo/proje1.png" },
-  { id: 5, title: "مطعم", imageName: "/photo/proje2.png" },
+  { id: 5, title: "طلبات", imageName: "/photo/proje5.png" },
   { id: 3, title: "عقارات", imageName: "/photo/proje4.png" },
 ];
 
@@ -42,9 +42,7 @@ export default function ProjectsGallery() {
   return (
     <div className="md:container mx-4 md:mx-auto py-[50px] md:py-[60px]">
       <div className="mb-12 text-center mx-auto w-full md:w-[600px]">
-        <h1 className="mb-5 text-[25px] md:text-[40px] font-semibold">
-          مشاريعنا
-        </h1>
+        <h1 className="mb-5 text-[25px] md:text-[40px] font-bold">مشاريعنا</h1>
         <p className="!leading-[1.4rem] md:!leading-7 xs:text-sm">
           نعرض لكم مجموعة مختارة من مواقع الويب التي قمنا بتصميمها وتطويرها
           باحترافية عالية. نركز على تقديم تجارب مستخدم سلسة، تصميمات حديثة،
@@ -58,20 +56,20 @@ export default function ProjectsGallery() {
             <Link href={"/"}>
               <div
                 key={item.id}
-                className="group relative w-full h-[400px] md:w-[360px] lg:w-[320px] xl:w-[400px] md:h-[515px] overflow-hidden  shadow-cardShadow content-center"
+                className=" group relative w-full h-[400px] md:w-[360px] lg:w-[320px] xl:w-[400px] md:h-[515px] overflow-hidden  shadow-cardShadow content-center"
               >
-                <div className="absolute inset-0 transition-transform duration-500 group-hover:-translate-y-14">
+                <div className=" ">
                   <Image
                     src={item.imageName}
                     alt="Example"
                     width={400}
                     height={515}
-                    className="object-cover object-top group-hover:object-bottom"
+                    className="object-cover h-[515px] object-top group-hover:object-bottom duration-[4s]"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t group-hover:bg-[#000000] to-transparent opacity-[0.6] transition-opacity duration-300 z-10" />
 
-                <div className="w-[63px] h-[64px] border-2 border-white hover:bg-white text-white hover:text-black  rounded-full relative -z-10 group-hover:z-20 content-center m-auto duration-300">
+                <div className="absolute top-[42%] left-[42%] w-[63px] h-[64px] border-2 border-white hover:bg-white text-white hover:text-black  rounded-full  -z-10 group-hover:z-20 content-center m-auto duration-300">
                   <HiArrowNarrowRight className=" m-auto text-[25px]" />
                 </div>
               </div>
