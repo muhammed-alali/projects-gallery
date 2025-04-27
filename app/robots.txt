@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /private/
-Disallow: /_next
-Disallow: /_next/*
-
-Sitemap: https://realty-weld.vercel.app/sitemap.xml
